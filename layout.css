@@ -1,0 +1,115 @@
+/* ═══════════════════════════════════════════════
+   FLUXORCA V3 — Layout
+═══════════════════════════════════════════════ */
+
+/* ── Container ── */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--s-8);
+}
+
+.container--narrow {
+  max-width: var(--container-narrow);
+}
+
+.container--wide {
+  max-width: var(--container-wide);
+}
+
+/* ── Sections ── */
+section {
+  position: relative;
+}
+
+.section {
+  padding: var(--s-24) 0;
+}
+
+.section--lg {
+  padding: var(--s-32) 0;
+}
+
+.section--sm {
+  padding: var(--s-16) 0;
+}
+
+/* ── Grids ── */
+.grid {
+  display: grid;
+  gap: var(--s-6);
+}
+
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+.grid-6 { grid-template-columns: repeat(6, 1fr); }
+
+/* ── Flex ── */
+.flex      { display: flex; }
+.flex-col  { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.items-center { align-items: center; }
+.items-start  { align-items: flex-start; }
+.justify-between { justify-content: space-between; }
+.justify-center  { justify-content: center; }
+.gap-2 { gap: var(--s-2); }
+.gap-4 { gap: var(--s-4); }
+.gap-6 { gap: var(--s-6); }
+.gap-8 { gap: var(--s-8); }
+
+/* ── Spacing ── */
+.mt-4  { margin-top: var(--s-4); }
+.mt-6  { margin-top: var(--s-6); }
+.mt-8  { margin-top: var(--s-8); }
+.mt-12 { margin-top: var(--s-12); }
+
+.mb-4  { margin-bottom: var(--s-4); }
+.mb-6  { margin-bottom: var(--s-6); }
+.mb-8  { margin-bottom: var(--s-8); }
+
+/* ── Text ── */
+.text-center { text-align: center; }
+.text-left   { text-align: left; }
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-6 { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--s-5);
+  }
+
+  .section {
+    padding: var(--s-16) 0;
+  }
+
+  .section--lg {
+    padding: var(--s-20) 0;
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  .grid-6 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-3.grid--2-on-mobile {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 var(--s-4);
+  }
+
+  .grid-3.grid--2-on-mobile {
+    grid-template-columns: 1fr;
+  }
+}
