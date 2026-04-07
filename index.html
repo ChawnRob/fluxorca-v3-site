@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fluxorca — Système de croissance automatisé pour business locaux. Avis Google, présence Instagram, feedback client. En pilote automatique." />
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:title" content="Fluxorca — Votre business en pilote automatique" />
+  <meta property="og:description" content="Automatisez vos avis Google, votre présence Instagram et votre relation client. Un système pensé pour les restaurants et commerces locaux." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/og-image.png" />
+
+  <title>Fluxorca — Votre business en pilote automatique</title>
+
+  <!-- ── Google Fonts ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- ── CSS ── -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+
+  <!--
+    ── NOTE SQUARESPACE ──
+    Pour intégrer dans Squarespace :
+    • CSS → Pages > CSS Editor (ou Settings > Custom CSS)
+    • JS  → Settings > Advanced > Code Injection (avant </body>)
+    • HTML → Blocs "Code" dans chaque section de page
+    • Supprimer les balises <link> et <script> src — coller le contenu directement
+  -->
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════
+     NAV
+════════════════════════════════════════════ -->
+
+<header id="nav-wrapper" class="nav-wrapper">
+  <div class="container">
+    <nav class="nav">
+
+      <a href="#" class="nav__logo">FLUX<span>ORCA</span></a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="#explore">Produits</a></li>
+        <li><a href="#how">Comment ça marche</a></li>
+        <li><a href="#cases">Cas d'usage</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+
+      <a href="https://wa.me/33600000000?text=Bonjour%2C%20je%20veux%20lancer%20mon%20syst%C3%A8me%20Fluxorca"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn btn--primary btn--sm nav__cta"
+         aria-label="Lancer mon système via WhatsApp">
+        Lancer mon système
+      </a>
+
+      <button id="nav-burger" class="nav__burger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </nav>
+  </div>
+</header>
+
+<!-- Menu mobile -->
+<nav id="nav-mobile" class="nav__mobile" aria-label="Menu principal mobile">
+  <a href="#explore">Produits</a>
+  <a href="#how">Comment ça marche</a>
+  <a href="#cases">Cas d'usage</a>
+  <a href="#faq">FAQ</a>
+  <a href="https://wa.me/33600000000?text=Bonjour%2C%20je%20veux%20lancer%20mon%20syst%C3%A8me%20Fluxorca"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="btn btn--primary btn--lg"
+     style="margin-top: 1rem; text-align:center;">
+    Lancer mon système
+  </a>
+</nav>
+
+
+<!-- ════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════ -->
+
+<section id="hero">
+
+  <div class="hero__bg" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="hero__inner">
+
+      <div class="hero__badge">
+        <span class="badge badge--accent badge--dot">
+          Système de croissance local
+        </span>
+      </div>
+
+      <h1 class="hero__title">
+        Votre business mérite<br>
+        un système.<br>
+        <span class="text-gradient">Pas un outil de plus.</span>
+      </h1>
+
+      <p class="hero__subtitle">
+        Fluxorca automatise vos avis Google, votre présence Instagram et votre feedback client —
+        en un seul système pensé pour les restaurants et commerces locaux.
+      </p>
+
+      <div class="hero__ctas">
+        <a href="https://wa.me/33600000000?text=Bonjour%2C%20je%20veux%20lancer%20mon%20syst%C3%A8me%20Fluxorca"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn btn--primary btn--lg">
+          <!-- WhatsApp icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Lancer mon système
+        </a>
+
+        <a href="#how" class="btn btn--ghost btn--lg">
+          Voir comment ça marche
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 5v14M5 12l7 7 7-7"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <div class="scroll-line"></div>
+        <span>Défiler</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     TRUST BAR
+════════════════════════════════════════════ -->
+
+<section id="trust" aria-label="Chiffres clés">
+  <div class="container">
+    <div class="trust__grid">
+
+      <div class="trust__item" data-reveal>
+        <span class="trust__number">5×</span>
+        <span class="trust__label">Plus d'avis Google</span>
+      </div>
+
+      <div class="trust__sep" aria-hidden="true"></div>
+
+      <div class="trust__item" data-reveal data-reveal-delay="1">
+        <span class="trust__number">3h</span>
+        <span class="trust__label">Économisées / semaine</span>
+      </div>
+
+      <div class="trust__sep" aria-hidden="true"></div>
+
+      <div class="trust__item" data-reveal data-reveal-delay="2">
+        <span class="trust__number">100%</span>
+        <span class="trust__label">Local & automatisé</span>
+      </div>
+
+      <div class="trust__sep" aria-hidden="true"></div>
+
+      <div class="trust__item" data-reveal data-reveal-delay="3">
+        <span class="trust__number">1</span>
+        <span class="trust__label">Système, pas 7 outils</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     STORYTELLING
+════════════════════════════════════════════ -->
+
+<section id="story" aria-label="Notre constat">
+  <div class="story__grid">
+
+    <div class="story__step">
+      <div class="story__step-num">01 — Le problème</div>
+      <h3>Vous gérez un business, pas une agence digitale.</h3>
+      <p>
+        Vous avez des clients à satisfaire, une équipe à manager, des commandes à gérer.
+        Votre présence en ligne passe en dernier — ou pas du tout.
+      </p>
+    </div>
+
+    <div class="story__step">
+      <div class="story__step-num">02 — Le chaos</div>
+      <h3>7 plateformes. Zéro cohérence. Trop peu de temps.</h3>
+      <p>
+        Google, Instagram, les avis, les réseaux, le CRM… Chaque outil est une contrainte.
+        Ensemble, c'est ingérable. Les clients partent sans laisser de trace.
+      </p>
+    </div>
+
+    <div class="story__step story__step--highlight">
+      <div class="story__step-num">03 — La solution</div>
+      <h3>Fluxorca est un système. Pas un outil de plus.</h3>
+      <p>
+        Un seul système qui connecte votre réputation, vos avis, votre Instagram et votre
+        feedback client. Et qui tourne en arrière-plan pendant que vous travaillez.
+      </p>
+    </div>
+
+    <div class="story__step">
+      <div class="story__step-num">04 — La transformation</div>
+      <h3>Contrôle, croissance, clarté — enfin.</h3>
+      <p>
+        Chaque client devient une opportunité. Chaque retour alimente votre croissance.
+        Vous gardez le contrôle sans gérer l'exécution.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     EXPLORATION (TABS)
+════════════════════════════════════════════ -->
+
+<section id="explore" class="section section--lg">
+  <div class="container">
+
+    <div class="section-header" data-reveal>
+      <span class="section-label">Explorer</span>
+      <h2>Tout ce que Fluxorca peut faire pour vous</h2>
+      <p>Un écosystème complet conçu pour les business qui veulent croître sans se disperser.</p>
+    </div>
+
+    <div data-tabs>
+
+      <!-- Onglets -->
+      <div class="tabs__nav" role="tablist" aria-label="Explorer Fluxorca">
+        <button class="tab-btn" role="tab" aria-selected="true">Par solution</button>
+        <button class="tab-btn" role="tab" aria-selected="false">Par métier</button>
+        <button class="tab-btn" role="tab" aria-selected="false">Par objectif</button>
+      </div>
+
+      <!-- Panel 1 : Par solution -->
+      <div class="tab-panel active" role="tabpanel">
+        <div class="explore-grid">
+
+          <div class="explore-card" data-reveal>
+            <div class="explore-card__emoji">📱</div>
+            <div class="explore-card__text">
+              <h4>Instagram Automation</h4>
+              <p>Contenu local publié régulièrement, sans intervention de votre part.</p>
+            </div>
+          </div>
+
+          <div class="explore-card" data-reveal data-reveal-delay="1">
+            <div class="explore-card__emoji">📍</div>
+            <div class="explore-card__text">
+              <h4>Google Presence</h4>
+              <p>Votre fiche Google optimisée, alimentée et surveillée automatiquement.</p>
+            </div>
+          </div>
+
+          <div class="explore-card" data-reveal data-reveal-delay="2">
+            <div class="explore-card__emoji">📲</div>
+            <div class="explore-card__text">
+              <h4>QR Feedback System</h4>
+              <p>Chaque table devient un point de collecte. Feedback instantané, avis dirigés.</p>
+            </div>
+          </div>
+
+          <div class="explore-card" data-reveal data-reveal-delay="3">
+            <div class="explore-card__emoji">🔁</div>
+            <div class="explore-card__text">
+              <h4>Client Follow-up</h4>
+              <p>Aucun client ne repart sans laisser de trace ou recevoir un message ciblé.</p>
+            </div>
+          </div>
+
+          <div class="explore-card" data-reveal data-reveal-delay="4">
+            <div class="explore-card__emoji">📊</div>
+            <div class="explore-card__text">
+              <h4>Analytics</h4>
+              <p>Un tableau de bord clair. Comprendre ce qui marche, vraiment.</p>
+            </div>
+          </div>
+
+          <div class="explore-card" data-reveal data-reveal-delay="5">
+            <div class="explore-card__emoji">🤖</div>
+            <div class="explore-card__text">
+              <h4>AI Engine</h4>
+              <p>L'IA qui connaît votre business et génère du contenu adapté à votre audience locale.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Panel 2 : Par métier -->
+      <div class="tab-panel" role="tabpanel">
+        <div class="explore-grid">
+
+          <div class="explore-card">
+            <div class="explore-card__emoji">🍽️</div>
+            <div class="explore-card__text">
+              <h4>Restaurants</h4>
+              <p>De la salle au digital, en automatique. Avis, feedback, Instagram.</p>
+            </div>
+          </div>
+
+          <div class="explore-card">
+            <div class="explore-card__emoji">✂️</div>
+            <div class="explore-card__text">
+              <h4>Barbers & Coiffeurs</h4>
+              <p>Réputation amplifiée. Clients récurrents. Visibilité locale renforcée.</p>
+            </div>
+          </div>
+
+          <div class="explore-card">
+            <div class="explore-card__emoji">🛍️</div>
+            <div class="explore-card__text">
+              <h4>Retail</h4>
+              <p>Du passage en magasin aux avis en ligne, automatiquement capturés.</p>
+            </div>
+          </div>
+
+          <div class="explore-card">
+            <div class="explore-card__emoji">🏨</div>
+            <div class="explore-card__text">
+              <h4>Hôtellerie</h4>
+              <p>De l'expérience client à la réputation numérique. Zéro friction.</p>
+            </div>
+          </div>
+
+          <div class="explore-card">
+            <div class="explore-card__emoji">⚡</div>
+            <div class="explore-card__text">
+              <h4>Services locaux</h4>
+              <p>Chaque prestation compte. Chaque client peut devenir un ambassadeur.</p>
+            </div>
+          </div>
+
+          <div class="explore-card">
+            <div class="explore-card__emoji">🌿</div>
+            <div class="explore-card__text">
+              <h4>Bien-être & Beauté</h4>
+              <p>Fidélisation renforcée, présence locale maîtrisée, croissance structurée.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Panel 3 : Par objectif -->
+      <div class="tab-panel" role="tabpanel">
+        <div class="explore-grid">
+
+          <div class="explore-card">
+            <div class="explore-card__emoji">⭐</div>
+            <div class="explore-card__text">
+              <h4>Générer plus d'avis</h4>
+              <p>Jusqu'à 5× plus d'avis Google sans demander manuellement à chaque client.</p>
+            </div>
+          </div>
+
+          <div class="explore-card">
+            <div class="explore-card__emoji">⏱️</div>
+            <div class="explore-card__text">
+              <h4>Gagner du temps</h4>
+              <p>Zéro publication manuelle, zéro oubli, zéro outil à gérer au quotidien.</p>
+            </div>
+          </div>
+
+          <div class="explore-card">
+            <div class="explore-card__emoji">🔍</div>
+            <div class="explore-card__text">
+              <h4>Augmenter la visibilité</h4>
+              <p>Présence Google et Instagram coordonnées et cohérentes en permanence.</p>
+            </div>
+          </div>
+
+          <div class="explore-card">
+            <div class="explore-card__emoji">💡</div>
+            <div class="explore-card__text">
+              <h4>Comprendre ses clients</h4>
+              <p>Feedback structuré, insights actionnables. Décidez avec des données réelles.</p>
+            </div>
+          </div>
+
+          <div class="explore-card">
+            <div class="explore-card__emoji">📈</div>
+            <div class="explore-card__text">
+              <h4>Structurer la croissance</h4>
+              <p>Un tableau de bord, pas 7 outils. Un système qui évolue avec vous.</p>
+            </div>
+          </div>
+
+          <div class="explore-card">
+            <div class="explore-card__emoji">🛡️</div>
+            <div class="explore-card__text">
+              <h4>Maîtriser sa réputation</h4>
+              <p>Chaque avis négatif est capturé en privé. Chaque avis positif est amplifié.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div><!-- /data-tabs -->
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     PRODUITS
+════════════════════════════════════════════ -->
+
+<section id="products" class="section">
+  <div class="container">
+
+    <div class="section-header" data-reveal>
+      <span class="section-label">Produits</span>
+      <h2>Cinq modules.<br>Un seul système.</h2>
+      <p>Chaque module fonctionne seul. Ensemble, ils forment un système de croissance complet.</p>
+    </div>
+
+    <div class="products__grid">
+
+      <!-- Growth — featured -->
+      <div class="product-card product-card--featured" data-reveal>
+        <span class="product-card__tag">Fluxorca Growth</span>
+        <h3>Votre Instagram local, en pilote automatique.</h3>
+        <p class="product-card__promise">
+          Contenu géolocalisé, ton cohérent, publications régulières.
+          Plus besoin de passer vos soirées à chercher quoi poster.
+        </p>
+        <div class="product-card__points">
+          <div class="product-card__point">Génération de contenu basée sur votre activité réelle</div>
+          <div class="product-card__point">Publication planifiée 3 à 5 fois par semaine</div>
+          <div class="product-card__point">Analyse de l'engagement et ajustement automatique</div>
+        </div>
+      </div>
+
+      <!-- QR System -->
+      <div class="product-card" data-reveal data-reveal-delay="1">
+        <span class="product-card__tag">Fluxorca QR System</span>
+        <h3>Chaque client peut devenir un ambassadeur.</h3>
+        <p class="product-card__promise">
+          Un QR sur vos tables. Un retour instantané. Les avis positifs partent sur Google,
+          les négatifs restent chez vous.
+        </p>
+        <div class="product-card__points">
+          <div class="product-card__point">Déploiement en moins d'une heure</div>
+          <div class="product-card__point">Redirection automatique vers Google Maps</div>
+          <div class="product-card__point">Alertes en temps réel pour les retours négatifs</div>
+        </div>
+      </div>
+
+      <!-- Analytics -->
+      <div class="product-card" data-reveal data-reveal-delay="2">
+        <span class="product-card__tag">Fluxorca Analytics</span>
+        <h3>Enfin comprendre ce qui marche.</h3>
+        <p class="product-card__promise">
+          Toutes vos données locales centralisées.
+          Un tableau de bord pensé pour les non-techniciens.
+        </p>
+        <div class="product-card__points">
+          <div class="product-card__point">Vue unifiée Google + Instagram + Feedback</div>
+          <div class="product-card__point">Rapports hebdomadaires automatiques</div>
+          <div class="product-card__point">Recommandations basées sur vos données réelles</div>
+        </div>
+      </div>
+
+      <!-- AI Engine -->
+      <div class="product-card" data-reveal data-reveal-delay="3">
+        <span class="product-card__tag">Fluxorca AI Engine</span>
+        <h3>L'IA qui connaît votre business local.</h3>
+        <p class="product-card__promise">
+          Réponses aux avis, contenu personnalisé, suggestions d'amélioration.
+          Une communication cohérente, sans effort humain.
+        </p>
+        <div class="product-card__points">
+          <div class="product-card__point">Réponses automatiques aux avis Google</div>
+          <div class="product-card__point">Contenu adapté à votre ton et votre identité</div>
+          <div class="product-card__point">Analyse sémantique des retours clients</div>
+        </div>
+      </div>
+
+      <!-- Security -->
+      <div class="product-card" data-reveal data-reveal-delay="4">
+        <span class="product-card__tag">Fluxorca Security</span>
+        <h3>Vos données restent les vôtres.</h3>
+        <p class="product-card__promise">
+          Accès sécurisé, données chiffrées, aucun partage tiers.
+          La conformité sans la complexité.
+        </p>
+        <div class="product-card__points">
+          <div class="product-card__point">Accès multi-utilisateurs avec rôles définis</div>
+          <div class="product-card__point">Chiffrement des données sensibles</div>
+          <div class="product-card__point">Audit trail complet des actions</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     COMMENT ÇA MARCHE
+════════════════════════════════════════════ -->
+
+<section id="how">
+  <div class="container section">
+
+    <div class="section-header section-header--center" data-reveal>
+      <span class="section-label">Process</span>
+      <h2>Opérationnel en 3 étapes.</h2>
+      <p>Pas de mois de configuration. Pas de formation interminable. Un système prêt à tourner.</p>
+    </div>
+
+    <div class="how__steps">
+
+      <div class="how__step" data-reveal>
+        <div class="how__step-num">01</div>
+        <div>
+          <h3>Connexion</h3>
+          <p>On connecte vos plateformes en moins de 15 minutes. Google, Instagram, votre numéro WhatsApp.</p>
+          <div class="how__step-detail">
+            <span>Aucune compétence technique requise</span>
+            <span>Accompagnement à l'onboarding inclus</span>
+            <span>Setup complet en moins d'une heure</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="how__step" data-reveal data-reveal-delay="2">
+        <div class="how__step-num">02</div>
+        <div>
+          <h3>Automatisation</h3>
+          <p>Le système prend le relais. Avis Google, contenu Instagram, feedback client — tout tourne.</p>
+          <div class="how__step-detail">
+            <span>Zéro intervention manuelle au quotidien</span>
+            <span>Alertes uniquement pour ce qui compte</span>
+            <span>Contenu validé ou approuvé en un clic</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="how__step" data-reveal data-reveal-delay="4">
+        <div class="how__step-num">03</div>
+        <div>
+          <h3>Optimisation</h3>
+          <p>Chaque semaine, votre système s'améliore. Les données réelles orientent les actions suivantes.</p>
+          <div class="how__step-detail">
+            <span>Rapport hebdomadaire automatique</span>
+            <span>Recommandations basées sur vos résultats</span>
+            <span>Évolution du système avec votre business</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     POURQUOI FLUXORCA
+════════════════════════════════════════════ -->
+
+<section id="why" class="section">
+  <div class="container">
+
+    <div class="section-header section-header--center" data-reveal>
+      <span class="section-label">Pourquoi Fluxorca</span>
+      <h2>Construit pour les business qui n'ont pas le temps.</h2>
+      <p>Pas une promesse marketing. Des principes de conception.</p>
+    </div>
+
+    <div class="why__grid">
+
+      <div class="why__card" data-reveal>
+        <div class="why__icon">🎛️</div>
+        <h3>Vous gardez le contrôle</h3>
+        <p>Fluxorca automatise l'exécution. Vous définissez la direction. Aucun contenu ne part sans que vous l'ayez validé.</p>
+      </div>
+
+      <div class="why__card" data-reveal data-reveal-delay="1">
+        <div class="why__icon">⚡</div>
+        <h3>Automatisation intelligente</h3>
+        <p>Pas des macros qui répètent. Un système qui s'adapte à votre activité, vos retours clients et vos résultats.</p>
+      </div>
+
+      <div class="why__card" data-reveal data-reveal-delay="2">
+        <div class="why__icon">📍</div>
+        <h3>Signal local fort</h3>
+        <p>Google et Instagram sont vos deux leviers de visibilité locale. Fluxorca les active ensemble, pas séparément.</p>
+      </div>
+
+      <div class="why__card" data-reveal data-reveal-delay="3">
+        <div class="why__icon">🛡️</div>
+        <h3>Réputation maîtrisée</h3>
+        <p>Les avis négatifs sont captés en privé avant de partir en ligne. Les positifs sont amplifiés sur Google.</p>
+      </div>
+
+      <div class="why__card" data-reveal data-reveal-delay="4">
+        <div class="why__icon">📈</div>
+        <h3>Système évolutif</h3>
+        <p>Vous commencez avec ce dont vous avez besoin. Vous activez les modules supplémentaires quand vous êtes prêt.</p>
+      </div>
+
+      <div class="why__card" data-reveal data-reveal-delay="5">
+        <div class="why__icon">⏳</div>
+        <h3>Gain de temps réel</h3>
+        <p>En moyenne, 3 heures récupérées par semaine dès le premier mois. Sans sacrifier la qualité de votre présence.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     CAS D'USAGE
+════════════════════════════════════════════ -->
+
+<section id="cases">
+  <div class="container section">
+
+    <div class="section-header" data-reveal>
+      <span class="section-label">Cas d'usage</span>
+      <h2>Ce que Fluxorca change, concrètement.</h2>
+      <p>Des scénarios réels. Des résultats mesurables.</p>
+    </div>
+
+    <div class="cases__grid">
+
+      <div class="case-card" data-reveal>
+        <div class="case-card__meta">
+          <span class="badge">🍽️ Restaurant</span>
+          <span class="case-card__type">QR Feedback System</span>
+        </div>
+        <p class="case-card__situation">
+          "Un client mange. Il repart satisfait. Mais il n'a jamais laissé d'avis. Et ça se répète 40 fois par soir."
+        </p>
+        <div class="case-card__action">
+          <h4>Ce que fait Fluxorca</h4>
+          <p>Le QR sur la table collecte un retour en 10 secondes. Si positif → redirection Google Maps. Si négatif → alerte privée au gérant, sans que ça parte en ligne.</p>
+        </div>
+        <div class="case-card__result">+47 avis en 3 semaines. Score passé de 3.8 à 4.6</div>
+      </div>
+
+      <div class="case-card" data-reveal data-reveal-delay="2">
+        <div class="case-card__meta">
+          <span class="badge">🍽️ Restaurant</span>
+          <span class="case-card__type">Instagram Automation</span>
+        </div>
+        <p class="case-card__situation">
+          "On n'a pas posté sur Instagram depuis 3 semaines. On n'a pas le temps, et on ne sait jamais quoi dire."
+        </p>
+        <div class="case-card__action">
+          <h4>Ce que fait Fluxorca</h4>
+          <p>Le système génère du contenu basé sur le menu, les horaires et la localisation. Publication automatique 4 fois par semaine avec un ton cohérent.</p>
+        </div>
+        <div class="case-card__result">+210 reach moyen par post sans aucune intervention</div>
+      </div>
+
+      <div class="case-card" data-reveal data-reveal-delay="1">
+        <div class="case-card__meta">
+          <span class="badge">✂️ Barber</span>
+          <span class="case-card__type">Google Presence + Analytics</span>
+        </div>
+        <p class="case-card__situation">
+          "Je sais pas si mes clients viennent de Google ou de bouche-à-oreille. Et ma fiche Google, je l'ai pas touchée depuis un an."
+        </p>
+        <div class="case-card__action">
+          <h4>Ce que fait Fluxorca</h4>
+          <p>La fiche Google est mise à jour automatiquement. Les sources de trafic sont tracées. Chaque semaine, un rapport clair indique d'où viennent les clients.</p>
+        </div>
+        <div class="case-card__result">Visibilité locale +60% en 30 jours</div>
+      </div>
+
+      <div class="case-card" data-reveal data-reveal-delay="3">
+        <div class="case-card__meta">
+          <span class="badge">🛍️ Commerce local</span>
+          <span class="case-card__type">Client Follow-up + AI Engine</span>
+        </div>
+        <p class="case-card__situation">
+          "Mes clients réguliers reviennent, mais les nouveaux disparaissent après le premier achat. Je peux rien faire."
+        </p>
+        <div class="case-card__action">
+          <h4>Ce que fait Fluxorca</h4>
+          <p>Chaque nouveau client reçoit un message de suivi automatique. L'IA personnalise le contenu selon les habitudes d'achat détectées.</p>
+        </div>
+        <div class="case-card__result">Taux de retour +35% sur les 30 premiers jours</div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     FAQ
+════════════════════════════════════════════ -->
+
+<section id="faq" class="section">
+  <div class="container">
+
+    <div class="section-header section-header--center" data-reveal>
+      <span class="section-label">FAQ</span>
+      <h2>Les vraies questions.</h2>
+      <p>Les réponses directes.</p>
+    </div>
+
+    <div class="faq__list" data-reveal>
+
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          C'est quoi exactement Fluxorca ?
+          <svg class="faq__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m6 9 6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="faq__answer">
+          <div class="faq__answer-inner">
+            Fluxorca est un système de croissance pour business locaux. Il connecte vos avis Google, votre présence Instagram, votre feedback client et votre relation client dans un seul système automatisé. Vous définissez la direction, Fluxorca gère l'exécution.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          Est-ce que j'ai besoin de connaissances techniques ?
+          <svg class="faq__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m6 9 6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="faq__answer">
+          <div class="faq__answer-inner">
+            Non. Le setup est guidé et prend moins d'une heure. Aucune compétence tech requise. On s'occupe de tout configurer. Vous utilisez le dashboard — c'est tout.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          Combien de temps pour voir des résultats ?
+          <svg class="faq__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m6 9 6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="faq__answer">
+          <div class="faq__answer-inner">
+            Les premiers avis Google apparaissent généralement dans les 7 à 10 jours après activation du QR System. La visibilité Instagram se construit sur 3 à 4 semaines. Le gain de temps est immédiat dès le premier jour.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          Est-ce que ça marche pour mon type de business ?
+          <svg class="faq__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m6 9 6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="faq__answer">
+          <div class="faq__answer-inner">
+            Fluxorca est conçu pour les business locaux avec une relation directe au client : restaurants, barbers, retail, hôtellerie, services. Si vous recevez des clients en face-à-face, Fluxorca peut travailler pour vous.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          Est-ce que je garde le contrôle sur mon contenu ?
+          <svg class="faq__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m6 9 6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="faq__answer">
+          <div class="faq__answer-inner">
+            Toujours. Fluxorca génère et planifie, vous validez. Vous pouvez approuver, modifier ou rejeter chaque contenu avant publication. Ou passer en mode automatique complet si vous faites confiance au système.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          Comment se passe la mise en place ?
+          <svg class="faq__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m6 9 6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="faq__answer">
+          <div class="faq__answer-inner">
+            Vous nous contactez via WhatsApp. On organise un appel de 30 minutes pour comprendre votre business. On configure tout ensemble et on vous forme en moins d'une heure. Vous repartez avec un système opérationnel.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          C'est combien ?
+          <svg class="faq__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m6 9 6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="faq__answer">
+          <div class="faq__answer-inner">
+            Le prix dépend des modules activés et de la taille de votre business. On ne fait pas de grille tarifaire générique — on construit un système sur mesure. Parlez-nous de votre situation et on vous propose quelque chose d'adapté.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          Mes données sont-elles sécurisées ?
+          <svg class="faq__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m6 9 6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="faq__answer">
+          <div class="faq__answer-inner">
+            Oui. Vos données ne sont jamais revendues ni partagées à des tiers. Tout est chiffré. Vous pouvez demander l'export ou la suppression de vos données à tout moment.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     CTA FINAL
+════════════════════════════════════════════ -->
+
+<section id="cta-final" class="section section--lg">
+  <div class="container">
+    <div class="cta-final__inner" data-reveal>
+
+      <span class="section-label" style="justify-content:center; margin-bottom: var(--s-5);">
+        Prêt à démarrer
+      </span>
+
+      <h2>
+        Arrêtez de gérer votre présence.<br>
+        <span class="text-gradient">Laissez le système travailler.</span>
+      </h2>
+
+      <p>
+        Un appel de 30 minutes suffit à comprendre votre situation et à savoir si Fluxorca est fait pour vous.
+        Pas de pression. Pas de blabla commercial.
+      </p>
+
+      <div style="display:flex; flex-wrap:wrap; gap: var(--s-3); justify-content:center;">
+        <a href="https://wa.me/33600000000?text=Bonjour%2C%20je%20veux%20lancer%20mon%20syst%C3%A8me%20Fluxorca"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn btn--primary btn--lg">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Lancer mon système
+        </a>
+        <a href="#explore" class="btn btn--ghost btn--lg">Explorer les produits</a>
+      </div>
+
+      <p class="cta-final__reassure">
+        Réponse sous 24h · Aucun engagement · Appel gratuit
+      </p>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════ -->
+
+<footer>
+  <div class="container">
+    <div class="footer__inner">
+
+      <span class="footer__logo">FLUXORCA</span>
+
+      <nav class="footer__links" aria-label="Liens footer">
+        <a href="#explore">Produits</a>
+        <a href="#how">Comment ça marche</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://wa.me/33600000000" target="_blank" rel="noopener noreferrer">Contact</a>
+      </nav>
+
+      <span class="footer__copy">
+        © <span id="footer-year">2025</span> Fluxorca. Tous droits réservés.
+      </span>
+
+    </div>
+  </div>
+</footer>
+
+
+<!-- ════════════════════════════════════════════
+     JS — chargé en bas pour la performance
+════════════════════════════════════════════ -->
+
+<script src="js/nav.js"></script>
+<script src="js/tabs.js"></script>
+<script src="js/faq.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+  // Année dynamique dans le footer
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+</script>
+
+<!--
+  ── NOTE SQUARESPACE ──
+  Pour intégrer sur Squarespace, copier les blocs <script src="..."> ci-dessus
+  dans Settings > Advanced > Code Injection (avant </body>),
+  en remplaçant les src par le code inline de chaque fichier JS.
+-->
+
+</body>
+</html>
